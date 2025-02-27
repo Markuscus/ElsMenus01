@@ -1,0 +1,80 @@
+/*Estils generals*/
+body {
+    font-family: Arial, sans-serif; /*tipus de font*/
+    margin: 0;  /*Valors a cero*/
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/*Estils per al header*/
+header {
+    background-color: #4CAF50; /* color de fons */
+    color: white;
+    padding: 30px;  /*amplaria del header*/
+    text-align: center;     /* text centrat*/
+}
+
+/*Estils per al menu horitzonal*/
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;     /*alplaria de les cel.les*/
+    overflow: hidden;
+    background-color: #333;
+    text-align: center;
+}
+/*el menu comença a l´esquerra LEFT*/
+/*En el border-right coloquem les barretes de separaciò*/
+li {
+    float: left;    
+    border-right: 1px solid #bbb;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    /*estal linea estava en el li de dalt*/
+    border-right: 1px solid #bbb;
+}
+
+li a:hover {
+    background-color: #bbb;
+}
+
+li:last-child {
+    border-right: none;
+    /*Per a no posar la barra a la dreta de lultim element*/
+}
+/*Estils del contingut pricipal*/
+main {
+    padding: 20px;
+}
+/*Estils pel footer*/
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/*Responsividad : Menu en el mòvil*/
+@media screen and (max-width: 600px) {
+    ul {
+        text-align: left;
+    }
+    li {
+        display: block;
+        border-right: none;
+    }
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }
+  

@@ -1,0 +1,104 @@
+        /* Es factible escriure els style d´un html normal i despres fer un copia pega del codi a una nova
+        pagina css, es podra dir igual al html per entendren´s*/
+        /*Color de fons de pantalla el backgroun*/
+        body {
+            background-color: rosybrown;
+            margin: 0;
+            padding: 0;
+        }
+        /*Estils del header*/
+        header {
+            background-color: #2936;    /* El color de fons del header*/
+            color: white;   /*Color de lletrs del header*/
+            padding: 15px;  /* Amplaria del header*/
+            text-align: center;     /* Com esta situada la alineacio de text.*/
+
+        }
+        /* Estils per a footer*/
+        footer {
+            background-color: red;  /*Color de background footer*/
+            color: white;   /*Color lletres footer*/
+            text-align: center; /* alicinacio de text central*/
+            padding: 10px;  /* Marge Sup e Inf. del recuadre footer amb el text*/
+            width: 100%;    /*el peu de pag. ocupara el 100% del ample disponible del seu contenidor principal*/
+            
+        }
+
+        nav {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);  /* son 4 columnes iguals*/
+            gap: 1px;   /* Espai entre menús */
+            background-color: brown;
+            margin-bottom: 20px;    /*Separar el menu del contingut*/
+            
+        }
+
+        main {
+            padding: 20px;
+            margin-top: 20px;   /* Separar el contingut del menu */
+        }
+        /* ul llista unordered;
+        li estem dient que elimine els estils predeterminats de la llista
+        margin i padding a cero
+        i un color de fons gris oscur
+        */
+        
+        /* Estils per als elements del menu*/
+        .dropdown {
+            position: relative;
+        }
+
+        /* Estils per al boto de menu*/
+        .dropbtn {
+            
+            display: inline-block;
+            color: white;   /*color de lletra*/
+            padding: 16px;  /*separacio verical entre el contenidor i el text*/
+            background-color: black; /*color de fons*/
+            text-align: center; /*text centrat*/
+            text-decoration: none;
+        }
+        /* Estil per pasar el ratoli a sobre */
+        .dropbtn:hover {
+            background-color: cornflowerblue;
+        }
+        /* Estil per al contingut desplegable*/   
+        .dropdown-content {
+            display: none;
+            position: absolute;     /* Mante els elements del menu desplegable Estatics, quan
+            es desplegen no alteren la posicio de la resta d´elements de la pàgina*/
+            background-color: greenyellow;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        
+
+        .dropdown-content a {
+            color: black;       /*Color lletra dels links desplegables*/
+            padding: 10px;         /* li dones amplaria a les caselles que allotgen "links" */
+            text-decoration: none;
+            display: block;      
+            
+        }
+        /* Estil al pasar el ratoli a sobre els elements del submenu*/
+        .dropdown-content a:hover {
+            background-color: cornflowerblue;
+        } /*El color de fons dels links*/
+        /*  Cuan el usuari pasa el ratoli per sobre el menù desplegable, es 
+        mostra el contingut del menu(display: block)
+        */
+        
+        .dropdown:hover .dropdown-content {
+            display: block;     /*que el tipus de desplegable siga cap a vall*/
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+            nav, article {
+            width: 100%;
+            height: auto;
+            }
+        }
+  
